@@ -44,3 +44,8 @@
   <div>✔️ Combine animations using commas in <code>animation</code> property</div>
   <div>✔️ Add <code>will-change: transform</code> for smoother transitions</div>
 </div>
+<br>
+<br>
+<div>
+  <code>first public repository</code>
+</div>
