@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bright gradient text</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      font-family: sans-serif;
+    }
+
+    .gradient-text {
+      font-size: 64px;
+      font-weight: bold;
+      background-image: repeating-linear-gradient(
+        90deg,
+        #FF6B6B 0%,
+        #FF8E8E 16.6%,
+        #4ECDC4 33.3%,
+        #45B7D1 50%,
+        #96C93D 66.6%,
+        #4ECDC4 83.3%,
+        #FF6B6B 100%
+      );
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradientScroll 5s linear infinite;
+    }
+
+    @keyframes gradientScroll {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <span class="gradient-text">Bright gradient</span>
+</body>
+</html>

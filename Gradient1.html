@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gradient text</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      font-family: sans-serif;
+    }
+
+    .gradient-text {
+      font-size: 64px;
+      font-weight: bold;
+      background-image: repeating-linear-gradient(
+        90deg,
+        #4F46E5 0%,
+        #6B7280 16.6%,
+        #3B82F6 33.3%,
+        #D946EF 50%,
+        #3B82F6 66.6%,
+        #6B7280 83.3%,
+        #4F46E5 100%
+      );
+      background-size: 200% auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradientScroll 6s linear infinite;
+    }
+
+    @keyframes gradientScroll {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 200% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <span class="gradient-text">Gradient</span>
+</body>
+</html>
